@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wilson K. Choi — Senior Software Engineer</title>
-  <meta name="description" content="Senior Software Engineer specializing in MLOps, distributed systems, and CPaaS. 15+ years building high-scale platforms." />
+  <meta name="description"
+    content="Senior Software Engineer specializing in MLOps, distributed systems, and CPaaS. 15+ years building high-scale platforms." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -31,7 +35,11 @@
     };
   </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
     /* ===== THEME TOKENS ===== */
     [data-theme="dark"] {
@@ -44,39 +52,39 @@
       --fg-emphasis: #ffffff;
       --accent: #5E6AD2;
       --accent-bright: #6872D9;
-      --accent-glow: rgba(94,106,210,0.3);
-      --border: rgba(255,255,255,0.06);
-      --border-hover: rgba(255,255,255,0.10);
-      --card-bg: linear-gradient(to bottom, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-      --card-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 2px 20px rgba(0,0,0,0.4);
-      --card-shadow-hover: 0 0 0 1px rgba(255,255,255,0.1), 0 8px 40px rgba(0,0,0,0.5), 0 0 80px rgba(94,106,210,0.08);
-      --pill-bg: rgba(255,255,255,0.04);
-      --pill-border: rgba(255,255,255,0.06);
-      --pill-hover-bg: rgba(94,106,210,0.12);
-      --pill-hover-border: rgba(94,106,210,0.3);
-      --divider: linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent);
+      --accent-glow: rgba(94, 106, 210, 0.3);
+      --border: rgba(255, 255, 255, 0.06);
+      --border-hover: rgba(255, 255, 255, 0.10);
+      --card-bg: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+      --card-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 2px 20px rgba(0, 0, 0, 0.4);
+      --card-shadow-hover: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 80px rgba(94, 106, 210, 0.08);
+      --pill-bg: rgba(255, 255, 255, 0.04);
+      --pill-border: rgba(255, 255, 255, 0.06);
+      --pill-hover-bg: rgba(94, 106, 210, 0.12);
+      --pill-hover-border: rgba(94, 106, 210, 0.3);
+      --divider: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.08), transparent);
       --timeline-dot-bg: #0a0a0c;
-      --timeline-dot-border: rgba(94,106,210,0.5);
-      --timeline-line: linear-gradient(to bottom, rgba(94,106,210,0.4), rgba(94,106,210,0.05));
-      --progress-track: rgba(255,255,255,0.06);
-      --icon-bg: rgba(94,106,210,0.1);
-      --icon-border: rgba(94,106,210,0.2);
-      --nav-bg: rgba(5,5,6,0.70);
-      --nav-border: rgba(255,255,255,0.06);
-      --spotlight-color: rgba(94,106,210,0.15);
-      --separator: rgba(255,255,255,0.10);
+      --timeline-dot-border: rgba(94, 106, 210, 0.5);
+      --timeline-line: linear-gradient(to bottom, rgba(94, 106, 210, 0.4), rgba(94, 106, 210, 0.05));
+      --progress-track: rgba(255, 255, 255, 0.06);
+      --icon-bg: rgba(94, 106, 210, 0.1);
+      --icon-border: rgba(94, 106, 210, 0.2);
+      --nav-bg: rgba(5, 5, 6, 0.70);
+      --nav-border: rgba(255, 255, 255, 0.06);
+      --spotlight-color: rgba(94, 106, 210, 0.15);
+      --separator: rgba(255, 255, 255, 0.10);
       --gradient-text-from: #ffffff;
-      --gradient-text-to: rgba(255,255,255,0.70);
-      --btn-shadow: 0 0 0 1px rgba(94,106,210,0.5), 0 2px 8px rgba(94,106,210,0.25), inset 0 1px 0 0 rgba(255,255,255,0.15);
-      --btn-shadow-hover: 0 0 0 1px rgba(94,106,210,0.6), 0 4px 16px rgba(94,106,210,0.35), inset 0 1px 0 0 rgba(255,255,255,0.2);
-      --glow-1: 0 0 600px 300px rgba(94,106,210,0.06), 0 0 300px 150px rgba(94,106,210,0.04);
-      --glow-2: 0 0 500px 250px rgba(100,80,190,0.04);
-      --glow-3: 0 0 400px 200px rgba(80,100,210,0.03);
+      --gradient-text-to: rgba(255, 255, 255, 0.70);
+      --btn-shadow: 0 0 0 1px rgba(94, 106, 210, 0.5), 0 2px 8px rgba(94, 106, 210, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+      --btn-shadow-hover: 0 0 0 1px rgba(94, 106, 210, 0.6), 0 4px 16px rgba(94, 106, 210, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+      --glow-1: 0 0 600px 300px rgba(94, 106, 210, 0.06), 0 0 300px 150px rgba(94, 106, 210, 0.04);
+      --glow-2: 0 0 500px 250px rgba(100, 80, 190, 0.04);
+      --glow-3: 0 0 400px 200px rgba(80, 100, 210, 0.03);
       --grid-opacity: 0.02;
       --scrollbar-track: #050506;
-      --scrollbar-thumb: rgba(255,255,255,0.1);
-      --scrollbar-thumb-hover: rgba(255,255,255,0.15);
-      --twistbox-border: rgba(255,255,255,0.06);
+      --scrollbar-thumb: rgba(255, 255, 255, 0.1);
+      --scrollbar-thumb-hover: rgba(255, 255, 255, 0.15);
+      --twistbox-border: rgba(255, 255, 255, 0.06);
     }
 
     [data-theme="light"] {
@@ -89,34 +97,34 @@
       --fg-emphasis: #0F172A;
       --accent: #4F46E5;
       --accent-bright: #6366F1;
-      --accent-glow: rgba(79,70,229,0.3);
+      --accent-glow: rgba(79, 70, 229, 0.3);
       --border: #E2E8F0;
       --border-hover: #CBD5E1;
       --card-bg: #FFFFFF;
-      --card-shadow: 0 4px 20px -2px rgba(79,70,229,0.08), 0 1px 3px rgba(0,0,0,0.06);
-      --card-shadow-hover: 0 10px 30px -5px rgba(79,70,229,0.15), 0 4px 6px -4px rgba(79,70,229,0.08);
+      --card-shadow: 0 4px 20px -2px rgba(79, 70, 229, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+      --card-shadow-hover: 0 10px 30px -5px rgba(79, 70, 229, 0.15), 0 4px 6px -4px rgba(79, 70, 229, 0.08);
       --pill-bg: #F1F5F9;
       --pill-border: #E2E8F0;
-      --pill-hover-bg: rgba(79,70,229,0.08);
-      --pill-hover-border: rgba(79,70,229,0.3);
+      --pill-hover-bg: rgba(79, 70, 229, 0.08);
+      --pill-hover-border: rgba(79, 70, 229, 0.3);
       --divider: linear-gradient(to right, transparent, #E2E8F0, transparent);
       --timeline-dot-bg: #FFFFFF;
-      --timeline-dot-border: rgba(79,70,229,0.5);
-      --timeline-line: linear-gradient(to bottom, rgba(79,70,229,0.3), rgba(79,70,229,0.05));
+      --timeline-dot-border: rgba(79, 70, 229, 0.5);
+      --timeline-line: linear-gradient(to bottom, rgba(79, 70, 229, 0.3), rgba(79, 70, 229, 0.05));
       --progress-track: #E2E8F0;
-      --icon-bg: rgba(79,70,229,0.08);
-      --icon-border: rgba(79,70,229,0.15);
-      --nav-bg: rgba(248,250,252,0.80);
+      --icon-bg: rgba(79, 70, 229, 0.08);
+      --icon-border: rgba(79, 70, 229, 0.15);
+      --nav-bg: rgba(248, 250, 252, 0.80);
       --nav-border: #E2E8F0;
-      --spotlight-color: rgba(79,70,229,0.06);
+      --spotlight-color: rgba(79, 70, 229, 0.06);
       --separator: #E2E8F0;
       --gradient-text-from: #0F172A;
       --gradient-text-to: #334155;
-      --btn-shadow: 0 4px 14px 0 rgba(79,70,229,0.3);
-      --btn-shadow-hover: 0 6px 20px 0 rgba(79,70,229,0.4);
-      --glow-1: 0 0 600px 300px rgba(79,70,229,0.04), 0 0 300px 150px rgba(79,70,229,0.03);
-      --glow-2: 0 0 500px 250px rgba(124,58,237,0.03);
-      --glow-3: 0 0 400px 200px rgba(99,102,241,0.03);
+      --btn-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.3);
+      --btn-shadow-hover: 0 6px 20px 0 rgba(79, 70, 229, 0.4);
+      --glow-1: 0 0 600px 300px rgba(79, 70, 229, 0.04), 0 0 300px 150px rgba(79, 70, 229, 0.03);
+      --glow-2: 0 0 500px 250px rgba(124, 58, 237, 0.03);
+      --glow-3: 0 0 400px 200px rgba(99, 102, 241, 0.03);
       --grid-opacity: 0;
       --scrollbar-track: #F8FAFC;
       --scrollbar-thumb: #CBD5E1;
@@ -124,7 +132,10 @@
       --twistbox-border: #E2E8F0;
     }
 
-    html { background: var(--bg-deep); }
+    html {
+      background: var(--bg-deep);
+    }
+
     body {
       background: var(--bg);
       color: var(--fg);
@@ -142,16 +153,21 @@
       pointer-events: none;
       z-index: 1;
       background-size: 64px 64px;
-      background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
-                         linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
     }
 
     /* Spotlight on cards */
-    .spotlight-card { position: relative; overflow: hidden; }
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+    }
+
     .spotlight-card::before {
       content: '';
       position: absolute;
-      width: 300px; height: 300px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       background: radial-gradient(circle, var(--spotlight-color) 0%, transparent 70%);
       pointer-events: none;
@@ -160,16 +176,23 @@
       transform: translate(-50%, -50%);
       z-index: 2;
     }
-    .spotlight-card:hover::before { opacity: 1; }
+
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
 
     /* Scroll reveal */
     .reveal {
       opacity: 0;
       transform: translateY(24px);
       transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* Gradient text */
     .gradient-text {
@@ -178,6 +201,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .accent-gradient-text {
       background: linear-gradient(135deg, var(--accent), #818cf8, var(--accent));
       background-size: 200% 200%;
@@ -186,26 +210,47 @@
       background-clip: text;
       animation: shimmer 3s ease-in-out infinite;
     }
+
     @keyframes shimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     /* Section divider */
-    .section-divider { height: 1px; background: var(--divider); }
+    .section-divider {
+      height: 1px;
+      background: var(--divider);
+    }
 
     /* Timeline */
     .timeline-line {
-      position: absolute; left: 7px; top: 24px; bottom: 0; width: 1px;
+      position: absolute;
+      left: 7px;
+      top: 24px;
+      bottom: 0;
+      width: 1px;
       background: var(--timeline-line);
     }
+
     .timeline-dot {
-      width: 15px; height: 15px; border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
       background: var(--timeline-dot-bg);
       border: 2px solid var(--timeline-dot-border);
       box-shadow: 0 0 8px var(--accent-glow);
-      flex-shrink: 0; position: relative; z-index: 2;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
     }
+
     .timeline-dot-active {
       background: var(--accent);
       border-color: var(--accent);
@@ -218,9 +263,10 @@
       border: 1px solid var(--border);
       box-shadow: var(--card-shadow);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                  box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                  border-color 0.3s ease-out;
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease-out;
     }
+
     .themed-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--card-shadow-hover);
@@ -233,10 +279,11 @@
       border: 1px solid var(--pill-border);
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .skill-pill:hover {
       background: var(--pill-hover-bg);
       border-color: var(--pill-hover-border);
-      box-shadow: 0 0 16px rgba(94,106,210,0.1);
+      box-shadow: 0 0 16px rgba(94, 106, 210, 0.1);
     }
 
     /* Icon container */
@@ -247,43 +294,98 @@
 
     /* Mobile nav */
     .mobile-nav {
-      transform: translateY(-10px); opacity: 0; pointer-events: none;
+      transform: translateY(-10px);
+      opacity: 0;
+      pointer-events: none;
       transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease-out;
     }
-    .mobile-nav.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+
+    .mobile-nav.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
 
     /* Theme toggle button */
     .theme-toggle {
-      width: 36px; height: 36px; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--pill-bg); border: 1px solid var(--border);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pill-bg);
+      border: 1px solid var(--border);
       cursor: pointer;
       transition: all 0.2s ease-out;
     }
-    .theme-toggle:hover { background: var(--pill-hover-bg); border-color: var(--border-hover); }
-    .theme-toggle svg { width: 18px; height: 18px; transition: transform 0.3s ease, opacity 0.2s ease; }
-    [data-theme="dark"] .icon-sun { display: block; }
-    [data-theme="dark"] .icon-moon { display: none; }
-    [data-theme="light"] .icon-sun { display: none; }
-    [data-theme="light"] .icon-moon { display: block; }
+
+    .theme-toggle:hover {
+      background: var(--pill-hover-bg);
+      border-color: var(--border-hover);
+    }
+
+    .theme-toggle svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease, opacity 0.2s ease;
+    }
+
+    [data-theme="dark"] .icon-sun {
+      display: block;
+    }
+
+    [data-theme="dark"] .icon-moon {
+      display: none;
+    }
+
+    [data-theme="light"] .icon-sun {
+      display: none;
+    }
+
+    [data-theme="light"] .icon-moon {
+      display: block;
+    }
 
     /* Reduce motion */
     @media (prefers-reduced-motion: reduce) {
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .accent-gradient-text { animation: none; }
-      .themed-card:hover { transform: none; }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .accent-gradient-text {
+        animation: none;
+      }
+
+      .themed-card:hover {
+        transform: none;
+      }
     }
 
     /* Scrollbar */
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
-    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
   </style>
 
   <!-- Prevent FOUC: apply saved theme before paint -->
   <script>
-    (function() {
+    (function () {
       var t = localStorage.getItem('theme') || 'dark';
       document.documentElement.setAttribute('data-theme', t);
     })();
@@ -294,12 +396,10 @@
 
   <!-- ===== AMBIENT BACKGROUND ===== -->
   <div class="fixed inset-0 pointer-events-none z-0" style="background: var(--bg);">
-    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full"
-         style="box-shadow: var(--glow-1);"></div>
-    <div class="absolute top-[30%] -left-[10%] w-1 h-1 rounded-full"
-         style="box-shadow: var(--glow-2);"></div>
-    <div class="absolute top-[40%] -right-[5%] w-1 h-1 rounded-full"
-         style="box-shadow: var(--glow-3);"></div>
+    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-1 h-1 rounded-full" style="box-shadow: var(--glow-1);">
+    </div>
+    <div class="absolute top-[30%] -left-[10%] w-1 h-1 rounded-full" style="box-shadow: var(--glow-2);"></div>
+    <div class="absolute top-[40%] -right-[5%] w-1 h-1 rounded-full" style="box-shadow: var(--glow-3);"></div>
   </div>
 
   <!-- ===== NAVIGATION ===== -->
@@ -316,15 +416,17 @@
           <a href="#projects" class="text-sm text-muted hover:text-fg transition-colors duration-200">Projects</a>
           <button id="theme-toggle-desktop" class="theme-toggle" aria-label="Toggle theme">
             <svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
             </svg>
             <svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
             </svg>
           </button>
           <a href="mailto:wilsonkichoi@gmail.com"
-             class="text-sm px-4 py-1.5 rounded-lg bg-accent hover:bg-accent-bright text-white transition-all duration-200 active:scale-[0.98]"
-             style="box-shadow: var(--btn-shadow);">
+            class="text-sm px-4 py-1.5 rounded-lg bg-accent hover:bg-accent-bright text-white transition-all duration-200 active:scale-[0.98]"
+            style="box-shadow: var(--btn-shadow);">
             Contact
           </a>
         </div>
@@ -332,31 +434,36 @@
         <div class="flex md:hidden items-center gap-2">
           <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle theme">
             <svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
             </svg>
             <svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
             </svg>
           </button>
           <button id="menu-toggle" class="p-2 text-muted hover:text-fg transition-colors" aria-label="Toggle menu">
-            <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            <svg id="menu-icon" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
-            <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.5"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
       </div>
       <!-- Mobile dropdown -->
-      <div id="mobile-nav" class="mobile-nav md:hidden backdrop-blur-xl px-6 pb-4" style="background: var(--nav-bg); border-top: 1px solid var(--nav-border);">
+      <div id="mobile-nav" class="mobile-nav md:hidden backdrop-blur-xl px-6 pb-4"
+        style="background: var(--nav-bg); border-top: 1px solid var(--nav-border);">
         <div class="flex flex-col gap-1 py-2">
           <a href="#experience" class="nav-link py-2 text-sm text-muted hover:text-fg transition-colors">Experience</a>
           <a href="#skills" class="nav-link py-2 text-sm text-muted hover:text-fg transition-colors">Skills</a>
           <a href="#projects" class="nav-link py-2 text-sm text-muted hover:text-fg transition-colors">Projects</a>
           <a href="mailto:wilsonkichoi@gmail.com"
-             class="mt-2 text-center text-sm px-4 py-2 rounded-lg bg-accent hover:bg-accent-bright text-white transition-all"
-             style="box-shadow: var(--btn-shadow);">
+            class="mt-2 text-center text-sm px-4 py-2 rounded-lg bg-accent hover:bg-accent-bright text-white transition-all"
+            style="box-shadow: var(--btn-shadow);">
             Contact
           </a>
         </div>
@@ -374,25 +481,28 @@
             Senior Software Engineer
           </span>
         </div>
-        <h1 class="reveal text-5xl md:text-7xl lg:text-8xl font-semibold tracking-[-0.03em] leading-none gradient-text mb-6"
-            style="transition-delay: 0.08s;">
+        <h1
+          class="reveal text-5xl md:text-7xl lg:text-8xl font-semibold tracking-[-0.03em] leading-none gradient-text mb-6"
+          style="transition-delay: 0.08s;">
           Wilson K. Choi
         </h1>
         <p class="reveal text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-10"
-           style="transition-delay: 0.16s;">
+          style="transition-delay: 0.16s;">
           <span class="accent-gradient-text font-semibold">MLOps &amp; Systems Architect</span> with 15+ years building
           high-scale distributed systems. Expert in Python, hybrid cloud, and bridging
           Data Science with Production Engineering.
         </p>
-        <div class="reveal flex flex-wrap items-center justify-center gap-4 text-sm"
-             style="transition-delay: 0.24s;">
+        <div class="reveal flex flex-wrap items-center justify-center gap-4 text-sm" style="transition-delay: 0.24s;">
           <span class="text-muted">Laguna Beach, CA</span>
           <span style="color: var(--separator);">|</span>
-          <a href="mailto:wilsonkichoi@gmail.com" class="text-muted hover:text-accent transition-colors">wilsonkichoi@gmail.com</a>
+          <a href="mailto:wilsonkichoi@gmail.com"
+            class="text-muted hover:text-accent transition-colors">wilsonkichoi@gmail.com</a>
           <span style="color: var(--separator);">|</span>
-          <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener" class="text-muted hover:text-accent transition-colors">LinkedIn</a>
+          <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener"
+            class="text-muted hover:text-accent transition-colors">LinkedIn</a>
           <span style="color: var(--separator);">|</span>
-          <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener" class="text-muted hover:text-accent transition-colors">GitHub</a>
+          <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener"
+            class="text-muted hover:text-accent transition-colors">GitHub</a>
         </div>
       </div>
     </section>
@@ -406,31 +516,36 @@
           <div class="reveal spotlight-card themed-card rounded-2xl p-6">
             <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
               </svg>
             </div>
             <h3 class="text-sm font-semibold text-fg mb-2">Track Record</h3>
             <p class="text-sm text-muted leading-relaxed">
-              Scaled platforms from employee <span class="text-fg font-medium">#50</span> to <span class="text-fg font-medium">700+</span> global enterprise.
+              Scaled platforms from employee <span class="text-fg font-medium">#50</span> to <span
+                class="text-fg font-medium">700+</span> global enterprise.
               Systems handling hundreds of CPS with <span class="text-fg font-medium">99.99%</span> availability.
             </p>
           </div>
           <div class="reveal spotlight-card themed-card rounded-2xl p-6" style="transition-delay: 0.08s;">
             <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
               </svg>
             </div>
             <h3 class="text-sm font-semibold text-fg mb-2">Leadership</h3>
             <p class="text-sm text-muted leading-relaxed">
-              Led engineering teams as both <span class="text-fg font-medium">Tech Lead</span> and <span class="text-fg font-medium">People Manager</span>.
+              Led engineering teams as both <span class="text-fg font-medium">Tech Lead</span> and <span
+                class="text-fg font-medium">People Manager</span>.
               Mentored engineers, drove strategy, delivered products unlocking new customer segments.
             </p>
           </div>
           <div class="reveal spotlight-card themed-card rounded-2xl p-6" style="transition-delay: 0.16s;">
             <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
               </svg>
             </div>
             <h3 class="text-sm font-semibold text-fg mb-2">Core Strengths</h3>
@@ -460,7 +575,8 @@
             <h3 class="text-xl md:text-2xl font-semibold text-fg">TeleSign</h3>
             <span class="font-mono text-xs text-muted mt-1 md:mt-0">2012 &mdash; 2025</span>
           </div>
-          <p class="text-sm text-muted mb-8">Los Angeles, CA &middot; Global leader in digital identity and CPaaS, acquired by Proximus Group.</p>
+          <p class="text-sm text-muted mb-8">Los Angeles, CA &middot; Global leader in digital identity and CPaaS,
+            acquired by Proximus Group.</p>
 
           <div class="space-y-8 ml-1">
             <!-- MLOps -->
@@ -471,18 +587,23 @@
                 <h4 class="text-base font-semibold text-fg">Senior Software Engineer &mdash; MLOps</h4>
                 <span class="font-mono text-xs text-muted">2024 &ndash; 2025</span>
               </div>
-              <p class="text-sm text-muted/80 italic mb-3">Built Model Packaging &amp; Deployment pipeline, bridging Data Science and Engineering.</p>
+              <p class="text-sm text-muted/80 italic mb-3">Built Model Packaging &amp; Deployment pipeline, bridging
+                Data Science and Engineering.</p>
               <ul class="space-y-2">
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Pipeline Architecture:</span> CI/CD workflow (Jenkins + Python) automating validation, packaging, and deployment of
-                  <span class="text-fg">scikit-learn models</span> to <span class="text-fg">AWS SageMaker</span> with Model Registry and multi-stage gates.
+                  <span class="text-fg font-medium">Pipeline Architecture:</span> CI/CD workflow (Jenkins + Python)
+                  automating validation, packaging, and deployment of
+                  <span class="text-fg">scikit-learn models</span> to <span class="text-fg">AWS SageMaker</span> with
+                  Model Registry and multi-stage gates.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Reliability:</span> Integrated <span class="text-fg">SageMaker Inference Recommender</span> for load testing. Custom
+                  <span class="text-fg font-medium">Reliability:</span> Integrated <span class="text-fg">SageMaker
+                    Inference Recommender</span> for load testing. Custom
                   <span class="text-fg">Grafana/ELK</span> dashboards for model performance and endpoint health.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Process Improvement:</span> Introduced Nightly Builds with synthetic test data (Parquet/Joblib), reducing deployment failures.
+                  <span class="text-fg font-medium">Process Improvement:</span> Introduced Nightly Builds with synthetic
+                  test data (Parquet/Joblib), reducing deployment failures.
                 </li>
               </ul>
             </div>
@@ -495,16 +616,21 @@
                 <h4 class="text-base font-semibold text-fg">Senior Software Engineer &mdash; Cross-Team Initiatives</h4>
                 <span class="font-mono text-xs text-muted">2023 &ndash; 2024</span>
               </div>
-              <p class="text-sm text-muted/80 italic mb-3">Embedded across teams to deliver new products and establish operational standards.</p>
+              <p class="text-sm text-muted/80 italic mb-3">Embedded across teams to deliver new products and establish
+                operational standards.</p>
               <ul class="space-y-2">
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Push Verify:</span> <span class="text-fg">gRPC-based</span> push notification service (Python, RabbitMQ, Firebase FCM) with multi-region deployment and Grafana/ELK monitoring.
+                  <span class="text-fg font-medium">Push Verify:</span> <span class="text-fg">gRPC-based</span> push
+                  notification service (Python, RabbitMQ, Firebase FCM) with multi-region deployment and Grafana/ELK
+                  monitoring.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Score Architecture:</span> Drove latency optimization of the Score pipeline. Contributed to Score 2.0 architecture redesign for the fraud detection platform.
+                  <span class="text-fg font-medium">Score Architecture:</span> Drove latency optimization of the Score
+                  pipeline. Contributed to Score 2.0 architecture redesign for the fraud detection platform.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Email Cleansing:</span> Python library for email validation using <span class="text-fg">PEG parsing</span>, RFC 5322 compliant with provider-specific rules.
+                  <span class="text-fg font-medium">Email Cleansing:</span> Python library for email validation using
+                  <span class="text-fg">PEG parsing</span>, RFC 5322 compliant with provider-specific rules.
                 </li>
               </ul>
             </div>
@@ -517,16 +643,22 @@
                 <h4 class="text-base font-semibold text-fg">Senior Software Engineer &mdash; VoIP Architecture</h4>
                 <span class="font-mono text-xs text-muted">2020 &ndash; 2023</span>
               </div>
-              <p class="text-sm text-muted/80 italic mb-3">Architected the &ldquo;Voice CPaaS&rdquo; platform, transforming legacy VoIP into the company&rsquo;s primary revenue engine.</p>
+              <p class="text-sm text-muted/80 italic mb-3">Architected the &ldquo;Voice CPaaS&rdquo; platform,
+                transforming legacy VoIP into the company&rsquo;s primary revenue engine.</p>
               <ul class="space-y-2">
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">System Rebuild:</span> Migrated Asterisk to <span class="text-fg">FreeSwitch, Kamailio, and FastAPI</span> on-prem and AWS. Enabled IVR, TTS, Conference, and <span class="text-fg">ASR</span> for enterprise customers including Microsoft Azure.
+                  <span class="text-fg font-medium">System Rebuild:</span> Migrated Asterisk to <span
+                    class="text-fg">FreeSwitch, Kamailio, and FastAPI</span> on-prem and AWS. Enabled IVR, TTS,
+                  Conference, and <span class="text-fg">ASR</span> for enterprise customers including Microsoft Azure.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Scaling:</span> Grew platform from <span class="text-fg">50 to 300 CPS</span> with <span class="text-fg">99.99%</span> availability across US, EU, and Asia.
+                  <span class="text-fg font-medium">Scaling:</span> Grew platform from <span class="text-fg">50 to 300
+                    CPS</span> with <span class="text-fg">99.99%</span> availability across US, EU, and Asia.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Hybrid Cloud:</span> Integrated on-prem telephony with <span class="text-fg">AWS</span> (Polly, S3, CloudFront, SQS, DynamoDB) and <span class="text-fg">GCP</span> (Speech-to-Text). End-to-end Call Recording &amp; Transcription pipeline.
+                  <span class="text-fg font-medium">Hybrid Cloud:</span> Integrated on-prem telephony with <span
+                    class="text-fg">AWS</span> (Polly, S3, CloudFront, SQS, DynamoDB) and <span
+                    class="text-fg">GCP</span> (Speech-to-Text). End-to-end Call Recording &amp; Transcription pipeline.
                 </li>
               </ul>
             </div>
@@ -539,16 +671,21 @@
                 <h4 class="text-base font-semibold text-fg">Team Lead &mdash; Intelligence &amp; Fraud</h4>
                 <span class="font-mono text-xs text-muted">2018 &ndash; 2020</span>
               </div>
-              <p class="text-sm text-muted/80 italic mb-3">Led a squad of 4 engineers building high-volume fraud detection APIs. Technical Lead and People Manager.</p>
+              <p class="text-sm text-muted/80 italic mb-3">Led a squad of 4 engineers building high-volume fraud
+                detection APIs. Technical Lead and People Manager.</p>
               <ul class="space-y-2">
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Performance:</span> Reduced Risk Scoring API latency from <span class="text-fg">300ms to 50ms (-83%)</span> via optimized retrieval and multi-layer caching.
+                  <span class="text-fg font-medium">Performance:</span> Reduced Risk Scoring API latency from <span
+                    class="text-fg">300ms to 50ms (-83%)</span> via optimized retrieval and multi-layer caching.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Data Pipeline:</span> Managed ETL processing millions of daily transactions for the &ldquo;Phone Number Intelligence&rdquo; product.
+                  <span class="text-fg font-medium">Data Pipeline:</span> Managed ETL processing millions of daily
+                  transactions for the &ldquo;Phone Number Intelligence&rdquo; product.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Leadership:</span> Mentored engineers, performance reviews, architecture planning. Delivered &ldquo;Batch Scoring Processor&rdquo; unlocking a new enterprise segment.
+                  <span class="text-fg font-medium">Leadership:</span> Mentored engineers, performance reviews,
+                  architecture planning. Delivered &ldquo;Batch Scoring Processor&rdquo; unlocking a new enterprise
+                  segment.
                 </li>
               </ul>
             </div>
@@ -563,10 +700,12 @@
               </div>
               <ul class="space-y-2">
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Internal Tools:</span> Centralized dashboards (Django) for API features, BI reporting, customer configs, billing/invoicing (NetSuite).
+                  <span class="text-fg font-medium">Internal Tools:</span> Centralized dashboards (Django) for API
+                  features, BI reporting, customer configs, billing/invoicing (NetSuite).
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Data Warehouse:</span> OLTP/OLAP systems and ETL processes for data-driven decision-making.
+                  <span class="text-fg font-medium">Data Warehouse:</span> OLTP/OLAP systems and ETL processes for
+                  data-driven decision-making.
                 </li>
               </ul>
             </div>
@@ -578,13 +717,16 @@
                 <h4 class="text-base font-semibold text-fg">Senior Software Engineer &mdash; API &amp; Backend</h4>
                 <span class="font-mono text-xs text-muted">2012 &ndash; 2015</span>
               </div>
-              <p class="text-sm text-muted/80 italic mb-3">Early hire (#50); company grew from startup to 700+ employee enterprise.</p>
+              <p class="text-sm text-muted/80 italic mb-3">Early hire (#50); company grew from startup to 700+ employee
+                enterprise.</p>
               <ul class="space-y-2">
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">High-Throughput Messaging:</span> Async queuing with <span class="text-fg">Python Celery and Redis</span>, resolving SMS processing bottlenecks.
+                  <span class="text-fg font-medium">High-Throughput Messaging:</span> Async queuing with <span
+                    class="text-fg">Python Celery and Redis</span>, resolving SMS processing bottlenecks.
                 </li>
                 <li class="text-sm text-muted leading-relaxed">
-                  <span class="text-fg font-medium">Distributed Systems:</span> Refactored monolith to multi-region (3 DC) architecture.
+                  <span class="text-fg font-medium">Distributed Systems:</span> Refactored monolith to multi-region (3
+                  DC) architecture.
                 </li>
               </ul>
             </div>
@@ -603,13 +745,16 @@
             <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer</h4>
             <ul class="space-y-2">
               <li class="text-sm text-muted leading-relaxed">
-                <span class="text-fg font-medium">Protocol Implementation:</span> Built custom <span class="text-fg">SMPP</span> client in pure Python from scratch.
+                <span class="text-fg font-medium">Protocol Implementation:</span> Built custom <span
+                  class="text-fg">SMPP</span> client in pure Python from scratch.
               </li>
               <li class="text-sm text-muted leading-relaxed">
-                <span class="text-fg font-medium">Billing Systems:</span> SMS billing with messaging queue and async Python workers communicating via SMPP.
+                <span class="text-fg font-medium">Billing Systems:</span> SMS billing with messaging queue and async
+                Python workers communicating via SMPP.
               </li>
               <li class="text-sm text-muted leading-relaxed">
-                <span class="text-fg font-medium">Mobile WAP:</span> In-house framework, internal tools, third-party integrations (REST, SOAP, raw socket).
+                <span class="text-fg font-medium">Mobile WAP:</span> In-house framework, internal tools, third-party
+                integrations (REST, SOAP, raw socket).
               </li>
             </ul>
           </div>
@@ -624,7 +769,8 @@
       <div class="max-w-5xl mx-auto">
         <div class="reveal mb-12 md:mb-16">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Toolkit</span>
-          <h2 class="text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Skills &amp; Technologies</h2>
+          <h2 class="text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Skills &amp; Technologies
+          </h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
@@ -641,6 +787,8 @@
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Lambda</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">ECS</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">AWS CDK</span>
+              <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Textract</span>
+              <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Step Functions</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Polly</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">CloudWatch</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">GCP Speech-to-Text</span>
@@ -695,7 +843,7 @@
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Django</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Celery</span>
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Docker</span>
-              <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Streamlit</span>
+              <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Agentic Dev Workflow</span>
             </div>
           </div>
 
@@ -736,22 +884,101 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a href="https://github.com/wilsonkichoi/the_beautiful_game" target="_blank" rel="noopener"
-             class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline">
+          <a href="https://github.com/wilsonkichoi/agentic_development_workflow" target="_blank" rel="noopener"
+            class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline">
             <div class="flex items-start justify-between mb-4">
               <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center">
-                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25a2.25 2.25 0 0 1-2.25-2.25v-2.25Z" />
                 </svg>
               </div>
-              <svg class="w-4 h-4 text-muted group-hover:text-accent transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/>
+              <svg
+                class="w-4 h-4 text-muted group-hover:text-accent transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
             </div>
-            <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">Soccer Analytics AI Agent</h3>
+            <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">Agentic Development
+              Workflow</h3>
             <p class="text-sm text-muted leading-relaxed mb-4">
-              AI-powered soccer analytics using <span class="text-fg">AWS Bedrock</span>, <span class="text-fg">Strands</span> agent framework,
-              and <span class="text-fg">CDK</span> infrastructure-as-code. Natural language queries, PDF schedule ingestion, Cognito auth.
+              Open-source 5-phase framework and plugin for <span class="text-fg">Claude Code</span>, <span
+                class="text-fg">Copilot CLI</span>,
+              and <span class="text-fg">Gemini CLI</span>. Structures AI-assisted development with persistent specs,
+              atomic task execution,
+              13 role-based agents, and human-gated review loops.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Claude Code</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Copilot CLI</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Gemini CLI</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">AI Workflow</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/wilsonkichoi/novascan" target="_blank" rel="noopener"
+            class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline"
+            style="transition-delay: 0.08s;">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+                </svg>
+              </div>
+              <svg
+                class="w-4 h-4 text-muted group-hover:text-accent transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">NovaScan</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">
+              AI-powered receipt scanner built end-to-end using the Agentic Development Workflow. Dual OCR pipeline
+              (<span class="text-fg">Textract</span> + <span class="text-fg">Bedrock Nova</span> multimodal)
+              orchestrated by
+              <span class="text-fg">Step Functions</span>, passwordless Cognito auth, DynamoDB single-table design, and
+              full CDK infrastructure.
+              <span class="text-fg font-medium">1,010 tests</span>.
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Textract</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Bedrock Nova</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Step Functions</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">CDK</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">DynamoDB</span>
+              <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Cognito</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/wilsonkichoi/the_beautiful_game" target="_blank" rel="noopener"
+            class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline"
+            style="transition-delay: 0.16s;">
+            <div class="flex items-start justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                </svg>
+              </div>
+              <svg
+                class="w-4 h-4 text-muted group-hover:text-accent transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">Soccer Analytics AI
+              Agent</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">
+              AI-powered soccer analytics using <span class="text-fg">AWS Bedrock</span>, <span
+                class="text-fg">Strands</span> agent framework,
+              and <span class="text-fg">CDK</span> infrastructure-as-code. Natural language queries, PDF schedule
+              ingestion, Cognito auth.
             </p>
             <div class="flex flex-wrap gap-1.5">
               <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Bedrock</span>
@@ -764,22 +991,28 @@
           </a>
 
           <a href="https://github.com/wilsonkichoi/wkc-concurrency-safety-test" target="_blank" rel="noopener"
-             class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline"
-             style="transition-delay: 0.08s;">
+            class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline"
+            style="transition-delay: 0.24s;">
             <div class="flex items-start justify-between mb-4">
               <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center">
-                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"/>
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                 </svg>
               </div>
-              <svg class="w-4 h-4 text-muted group-hover:text-accent transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"/>
+              <svg
+                class="w-4 h-4 text-muted group-hover:text-accent transition-all duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
             </div>
-            <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">Concurrency Safety Tester</h3>
+            <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">Concurrency Safety
+              Tester</h3>
             <p class="text-sm text-muted leading-relaxed mb-4">
               Python testing utility for detecting race conditions in threaded and async code.
-              Configurable thread counts, custom validators, <span class="text-fg font-mono text-xs">ContextVar</span> isolation patterns.
+              Configurable thread counts, custom validators, <span class="text-fg font-mono text-xs">ContextVar</span>
+              isolation patterns.
             </p>
             <div class="flex flex-wrap gap-1.5">
               <span class="skill-pill px-2 py-1 rounded-full text-[11px] text-muted">Python</span>
@@ -814,8 +1047,10 @@
       <span class="text-xs text-muted">&copy; 2026 Wilson K. Choi</span>
       <div class="flex items-center gap-6">
         <a href="mailto:wilsonkichoi@gmail.com" class="text-xs text-muted hover:text-accent transition-colors">Email</a>
-        <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener" class="text-xs text-muted hover:text-accent transition-colors">LinkedIn</a>
-        <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener" class="text-xs text-muted hover:text-accent transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener"
+          class="text-xs text-muted hover:text-accent transition-colors">LinkedIn</a>
+        <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener"
+          class="text-xs text-muted hover:text-accent transition-colors">GitHub</a>
       </div>
     </div>
   </footer>
@@ -885,4 +1120,5 @@
     });
   </script>
 </body>
+
 </html>
