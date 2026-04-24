@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Wilson K. Choi — Senior Software Engineer</title>
   <meta name="description"
     content="Senior Software Engineer specializing in MLOps, distributed systems, and CPaaS. 15+ years building high-scale platforms." />
@@ -347,6 +347,33 @@
       display: block;
     }
 
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 480px) {
+      .hero-heading {
+        font-size: 2.25rem !important;
+        line-height: 1.1;
+      }
+      .hero-subtitle {
+        font-size: 1rem !important;
+      }
+      .section-heading {
+        font-size: 1.75rem !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Disable card hover lift on touch — it sticks */
+      .themed-card:hover {
+        transform: none;
+      }
+      /* Slightly bigger tap targets for pills */
+      .skill-pill {
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+
     /* Reduce motion */
     @media (prefers-reduced-motion: reduce) {
       .reveal {
@@ -405,7 +432,7 @@
   <!-- ===== NAVIGATION ===== -->
   <nav class="fixed top-0 inset-x-0 z-50">
     <div class="backdrop-blur-xl border-b" style="background: var(--nav-bg); border-color: var(--nav-border);">
-      <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
         <a href="#" class="text-sm font-semibold tracking-tight text-fg hover:opacity-80 transition-opacity">
           WKC
         </a>
@@ -474,7 +501,7 @@
   <main class="relative z-10">
 
     <!-- ===== HERO ===== -->
-    <section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-28 px-6">
+    <section id="hero" class="pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-28 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto text-center">
         <div class="reveal">
           <span class="inline-block font-mono text-xs tracking-widest text-accent uppercase mb-6">
@@ -482,11 +509,11 @@
           </span>
         </div>
         <h1
-          class="reveal text-5xl md:text-7xl lg:text-8xl font-semibold tracking-[-0.03em] leading-none gradient-text mb-6"
+          class="reveal hero-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold tracking-[-0.03em] leading-none gradient-text mb-6"
           style="transition-delay: 0.08s;">
           Wilson K. Choi
         </h1>
-        <p class="reveal text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-10"
+        <p class="reveal hero-subtitle text-base sm:text-lg md:text-xl text-muted max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10"
           style="transition-delay: 0.16s;">
           <span class="accent-gradient-text font-semibold">MLOps &amp; Systems Architect</span> with 15+ years building
           high-scale distributed systems. Expert in Python, hybrid cloud, and bridging
@@ -510,9 +537,9 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== SUMMARY CARDS ===== -->
-    <section class="py-10 md:py-14 px-6">
+    <section class="py-10 md:py-14 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           <div class="reveal spotlight-card themed-card rounded-2xl p-6">
             <div class="w-10 h-10 rounded-xl icon-box flex items-center justify-center mb-4">
               <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
@@ -562,11 +589,11 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== EXPERIENCE ===== -->
-    <section id="experience" class="py-10 md:py-16 px-6">
+    <section id="experience" class="py-10 md:py-16 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="reveal mb-12 md:mb-16">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Career</span>
-          <h2 class="text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Professional Experience</h2>
+          <h2 class="section-heading text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Professional Experience</h2>
         </div>
 
         <!-- TeleSign -->
@@ -765,17 +792,17 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== SKILLS ===== -->
-    <section id="skills" class="py-10 md:py-16 px-6">
+    <section id="skills" class="py-10 md:py-16 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="reveal mb-12 md:mb-16">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Toolkit</span>
-          <h2 class="text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Skills &amp; Technologies
+          <h2 class="section-heading text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Skills &amp; Technologies
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-4">
           <!-- Cloud & Infra — 4 col -->
-          <div class="reveal spotlight-card themed-card md:col-span-4 rounded-2xl p-6">
+          <div class="reveal spotlight-card themed-card sm:col-span-2 md:col-span-4 rounded-2xl p-6">
             <span class="font-mono text-xs tracking-widest text-accent uppercase">Cloud &amp; Infrastructure</span>
             <div class="flex flex-wrap gap-2 mt-4">
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">AWS SageMaker</span>
@@ -812,7 +839,7 @@
           </div>
 
           <!-- MLOps — 3 col -->
-          <div class="reveal spotlight-card themed-card md:col-span-3 rounded-2xl p-6" style="transition-delay: 0.12s;">
+          <div class="reveal spotlight-card themed-card sm:col-span-2 md:col-span-3 rounded-2xl p-6" style="transition-delay: 0.12s;">
             <span class="font-mono text-xs tracking-widest text-accent uppercase">MLOps</span>
             <div class="flex flex-wrap gap-2 mt-4">
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">Model Registry</span>
@@ -824,7 +851,7 @@
           </div>
 
           <!-- Databases — 3 col -->
-          <div class="reveal spotlight-card themed-card md:col-span-3 rounded-2xl p-6" style="transition-delay: 0.16s;">
+          <div class="reveal spotlight-card themed-card sm:col-span-2 md:col-span-3 rounded-2xl p-6" style="transition-delay: 0.16s;">
             <span class="font-mono text-xs tracking-widest text-accent uppercase">Databases</span>
             <div class="flex flex-wrap gap-2 mt-4">
               <span class="skill-pill px-3 py-1.5 rounded-full text-xs text-fg">MSSQL</span>
@@ -876,14 +903,14 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="py-10 md:py-16 px-6">
+    <section id="projects" class="py-10 md:py-16 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="reveal mb-12 md:mb-16">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Side Projects</span>
-          <h2 class="text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Personal Projects</h2>
+          <h2 class="section-heading text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Personal Projects</h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <a href="https://github.com/wilsonkichoi/agentic_development_workflow" target="_blank" rel="noopener"
             class="reveal spotlight-card themed-card group rounded-2xl p-6 md:p-8 block no-underline">
             <div class="flex items-start justify-between mb-4">
@@ -1028,7 +1055,7 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== EDUCATION ===== -->
-    <section class="py-10 md:py-14 px-6">
+    <section class="py-10 md:py-14 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="reveal flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
@@ -1042,7 +1069,7 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="py-10 px-6 relative z-10" style="background: var(--bg); border-top: 1px solid var(--border);">
+  <footer class="py-10 px-4 sm:px-6 relative z-10" style="background: var(--bg); border-top: 1px solid var(--border);">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <span class="text-xs text-muted">&copy; 2026 Wilson K. Choi</span>
       <div class="flex items-center gap-6">
@@ -1091,9 +1118,10 @@
     spotStyle.textContent = `.spotlight-card::before { left: var(--spot-x, 50%); top: var(--spot-y, 50%); }`;
     document.head.appendChild(spotStyle);
 
-    // --- Hero parallax ---
+    // --- Hero parallax (disabled on touch/small screens for perf) ---
     const hero = document.getElementById('hero');
-    if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window;
+    if (hero && !isMobile && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       window.addEventListener('scroll', () => {
         const f = Math.min(window.scrollY / 600, 1);
         hero.style.opacity = 1 - f;
