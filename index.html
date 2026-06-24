@@ -413,6 +413,27 @@
   </style>
 
   
+  <style>/* Resume Builder — CSS Custom Property Overrides
+   Place this file at templates/style.css to override the built-in HTML theme.
+   Only include the properties you want to change. */
+
+/* Example: change the accent color */
+/*
+[data-theme="dark"] {
+  --accent: #E53E3E;
+  --accent-bright: #FC8181;
+  --accent-glow: rgba(229, 62, 62, 0.3);
+}
+
+[data-theme="light"] {
+  --accent: #DC2626;
+  --accent-bright: #EF4444;
+}
+*/
+
+/* See README.md "Template Customization" section for all available CSS properties. */
+</style>
+  
 
   <!-- Prevent FOUC: apply saved theme before paint -->
   <script>
@@ -445,6 +466,18 @@
           <a href="#experience" class="text-sm text-muted hover:text-fg transition-colors duration-200">Experience</a>
           <a href="#skills" class="text-sm text-muted hover:text-fg transition-colors duration-200">Skills</a>
           <a href="#projects" class="text-sm text-muted hover:text-fg transition-colors duration-200">Projects</a>
+          <a href="mailto:wilsonkichoi@gmail.com" aria-label="Email"
+            class="text-muted hover:text-fg transition-colors duration-200">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+          </a>
+          <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener" aria-label="GitHub"
+            class="text-muted hover:text-fg transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener" aria-label="LinkedIn"
+            class="text-muted hover:text-fg transition-colors duration-200">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
           <button id="theme-toggle-desktop" class="theme-toggle" aria-label="Toggle theme">
             <svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round"
@@ -455,11 +488,6 @@
                 d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
             </svg>
           </button>
-          <a href="mailto:wilsonkichoi@gmail.com"
-            class="text-sm px-4 py-1.5 rounded-lg bg-accent hover:bg-accent-bright text-white transition-all duration-200 active:scale-[0.98]"
-            style="box-shadow: var(--btn-shadow);">
-            Contact
-          </a>
         </div>
         <!-- Mobile: toggle + hamburger -->
         <div class="flex md:hidden items-center gap-2">
@@ -492,11 +520,20 @@
           <a href="#experience" class="nav-link py-2 text-sm text-muted hover:text-fg transition-colors">Experience</a>
           <a href="#skills" class="nav-link py-2 text-sm text-muted hover:text-fg transition-colors">Skills</a>
           <a href="#projects" class="nav-link py-2 text-sm text-muted hover:text-fg transition-colors">Projects</a>
-          <a href="mailto:wilsonkichoi@gmail.com"
-            class="mt-2 text-center text-sm px-4 py-2 rounded-lg bg-accent hover:bg-accent-bright text-white transition-all"
-            style="box-shadow: var(--btn-shadow);">
-            Contact
-          </a>
+          <div class="flex items-center gap-5 py-2">
+            <a href="mailto:wilsonkichoi@gmail.com" aria-label="Email"
+              class="text-muted hover:text-fg transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+            </a>
+            <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener" aria-label="GitHub"
+              class="text-muted hover:text-fg transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener" aria-label="LinkedIn"
+              class="text-muted hover:text-fg transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -537,7 +574,7 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== SUMMARY CARDS ===== -->
-    <section class="py-10 md:py-14 px-4 sm:px-6">
+    <section class="py-8 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           <div class="reveal spotlight-card themed-card rounded-2xl p-6">
@@ -577,65 +614,68 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== EXPERIENCE ===== -->
-    <section id="experience" class="py-10 md:py-16 px-4 sm:px-6">
+    <section id="experience" class="py-8 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="reveal mb-12 md:mb-16">
+        <div class="reveal mb-8">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Career</span>
           <h2 class="section-heading text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Professional Experience</h2>
         </div>
 
-        <div class="reveal mb-12">
+        <div class="reveal">
           <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-1">
             <h3 class="text-xl md:text-2xl font-semibold text-fg">Independent</h3>
             <span class="font-mono text-xs text-muted mt-1 md:mt-0">4/2025 - Present</span>
           </div>
           
-          <p class="text-sm text-muted mb-8">Laguna Beach, CA</p>
+          <p class="text-sm text-muted mb-4">Laguna Beach, CA</p>
           
 
-          <div class="space-y-8 ml-1">
+          <div class="space-y-6 ml-1">
             
-            <div class="relative pl-8">
-              <div class="absolute left-0 top-1.5 timeline-dot timeline-dot-active"></div>
+            <div class="relative">
               <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
-                <h4 class="text-base font-semibold text-fg">Self-Directed Engineering &amp; AI</h4>
+                <h4 class="text-lg font-semibold text-fg">Self-Directed Engineering &amp; AI</h4>
                 <span class="font-mono text-xs text-muted">4/2025 - Present</span>
               </div>
-              <p class="text-sm text-muted/80 italic mb-3">Career break for family while staying hands-on with AI-assisted engineering. Built a Claude Code plugin and shipped projects with <span class="text-fg">AWS Bedrock</span> (see Projects).</p>
+              <p class="text-base text-muted italic mb-3">Career break for family while staying hands-on with AI-assisted engineering. Built a Claude Code plugin and shipped projects with <span class="text-fg">AWS Bedrock</span> (see Projects).</p>
             </div>
             
           </div>
         </div>
         <div class="reveal">
-          <div class="section-divider mb-10"></div>
+          <div class="section-divider my-4"></div>
           <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-1">
             <h3 class="text-xl md:text-2xl font-semibold text-fg">TeleSign</h3>
             <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2012 - 3/2025</span>
           </div>
-          <p class="text-sm text-muted mb-6">Los Angeles, CA (Hybrid)</p>
+          <p class="text-sm text-muted mb-4">Los Angeles, CA (Hybrid)</p>
+          <div class="space-y-6">
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer - MLOps</h4>
-            <p class="text-sm text-muted/80 italic mb-3">Joined the MLOps team to build out the model packaging and deployment pipeline that takes trained artifacts from Data Science and packages, registers, and deploys them to <span class="text-fg">AWS SageMaker</span> for real-time and batch inference.</p>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Senior Software Engineer - MLOps</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2024 - 3/2025</span>
+            </div>
+            <p class="text-base text-muted italic mb-3">Joined the MLOps team to build out the model packaging and deployment pipeline that takes trained artifacts from Data Science and packages, registers, and deploys them to <span class="text-fg">AWS SageMaker</span> for real-time and batch inference.</p>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Pipeline Contribution:</span> Contributed to the <span class="text-fg">Jenkins + Python</span> pipeline that validates trained <span class="text-fg">scikit-learn</span> artifacts, repackages them via a SageMaker training job, registers them in <span class="text-fg">Model Registry</span>, and deploys to real-time endpoints and batch transform across regions.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Load Testing:</span> Integrated SageMaker <span class="text-fg">Inference Recommender</span> into the pipeline for automated load testing, producing capacity and latency reports (stored to <span class="text-fg">S3</span>) to right-size endpoint configuration before production.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Observability:</span> Designed and implemented end-to-end model-serving observability, streaming SageMaker and endpoint metrics through CloudWatch to on-prem ELK and Grafana dashboards to monitor model latency and endpoint health.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Nightly Builds:</span> Introduced "Nightly Builds" running the full packaging and deployment flow against a synthetic test model (<span class="text-fg">Parquet/Joblib</span>), catching pipeline and artifact regressions before real model releases, with automated resource cleanup.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Concurrency Safety:</span> Built a Python concurrency safety test harness to catch subtle multithreading bugs in inference code handed off from Data Science, preventing race conditions in production model serving. Later generalized into an open-source tool (see Projects).
               </li>
               
@@ -643,19 +683,22 @@
           </div>
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer - Cross-Team Initiatives</h4>
-            <p class="text-sm text-muted/80 italic mb-3">Embedded across multiple teams as a technical resource to deliver new products, address system performance issues, and establish operational standards.</p>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Senior Software Engineer - Cross-Team Initiatives</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2023 - 2/2024</span>
+            </div>
+            <p class="text-base text-muted italic mb-3">Embedded across multiple teams as a technical resource to deliver new products, address system performance issues, and establish operational standards.</p>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Push Verify:</span> Built a <span class="text-fg">gRPC</span>-based push notification verification service (Python, <span class="text-fg">RabbitMQ</span>, <span class="text-fg">Firebase FCM</span>) with multi-region deployment, operational runbooks, and <span class="text-fg">Grafana/ELK</span> monitoring.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Score Architecture:</span> Architected, designed, and implemented observability (ELK APM) for the Score fraud-detection serving layer, and authored the Score 2.0 architecture proposal and handover documentation that gave the inheriting team a clear implementation path.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Email Cleansing:</span> Developed a Python email validation and normalization library using Parsing Expression Grammar (<span class="text-fg">PEG</span>), replacing a regex approach that grew unmaintainable as provider-specific rules (Google, Yahoo, Outlook) multiplied. Supports RFC 5322 compliance.
               </li>
               
@@ -663,19 +706,22 @@
           </div>
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer - VoIP Architecture</h4>
-            <p class="text-sm text-muted/80 italic mb-3">Architected and built the "Voice CPaaS" platform ("Vox"), transforming a legacy VoIP stack into the company's primary revenue engine.</p>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Senior Software Engineer - VoIP Architecture</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2020 - 2/2023</span>
+            </div>
+            <p class="text-base text-muted italic mb-3">Architected and built the "Voice CPaaS" platform ("Vox"), transforming a legacy VoIP stack into the company's primary revenue engine.</p>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">System Rebuild:</span> Migrated a legacy <span class="text-fg">Asterisk</span> stack to <span class="text-fg">FreeSwitch</span>, <span class="text-fg">Kamailio</span>, and <span class="text-fg">FastAPI</span> running on-prem and AWS, enabling features including IVR, Text-to-Speech, Conference Bridging, and Automated Speech Recognition (ASR) for enterprise customers including Microsoft Azure.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Scaling &amp; Availability:</span> Designed a VoIP architecture and scaled platform capacity from 50 to 300 new calls per second (CPS) while maintaining 99.99% availability across US, EU, and Asia data centers.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Hybrid Cloud &amp; Call Recording:</span> Engineered a hybrid architecture integrating on-premise telephony (<span class="text-fg">FreeSwitch</span>, <span class="text-fg">Kamailio</span>, <span class="text-fg">UniMRCP</span>) with AWS (Polly, <span class="text-fg">S3</span>, <span class="text-fg">CloudFront</span>, <span class="text-fg">SQS</span>, <span class="text-fg">DynamoDB</span>) and GCP (Speech-to-Text). Designed end-to-end Call Recording & Transcription pipeline (<span class="text-fg">FreeSwitch</span> → <span class="text-fg">S3</span> → Transcription → customer-facing API).
               </li>
               
@@ -683,19 +729,22 @@
           </div>
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Team Lead - Intelligence &amp; Fraud</h4>
-            <p class="text-sm text-muted/80 italic mb-3">Led a squad of 4 engineers building high-volume fraud detection APIs. Served as both Technical Lead and People Manager.</p>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Team Lead - Intelligence &amp; Fraud</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2018 - 2/2020</span>
+            </div>
+            <p class="text-base text-muted italic mb-3">Led a squad of 4 engineers building high-volume fraud detection APIs. Served as both Technical Lead and People Manager.</p>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Performance Engineering:</span> Reduced Risk Scoring API latency from 300ms to 50ms (-83%) by optimizing data retrieval logic and implementing a multi-layer caching strategy.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Data Pipeline:</span> Managed the <span class="text-fg">ETL</span> pipeline processing millions of daily transactions, serving as the backbone for the company's "Phone Number Intelligence" product.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Leadership:</span> Mentored team members, conducted performance reviews, and managed product architecture planning. Delivered the "Batch Scoring Processor," which unlocked a new enterprise customer segment.
               </li>
               
@@ -703,14 +752,17 @@
           </div>
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer - BackOffice</h4>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Senior Software Engineer - BackOffice</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2015 - 2/2018</span>
+            </div>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Internal Tools:</span> Built centralized dashboards (<span class="text-fg">Django</span>) to manage API features, BI reporting, customer configurations, and billing/invoicing (<span class="text-fg">NetSuite</span> integration).
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Data Warehouse:</span> Collaborated with DBAs to design and implement <span class="text-fg">OLTP/OLAP</span> systems and <span class="text-fg">ETL</span> processes, improving reporting capabilities for the sales and support teams.
               </li>
               
@@ -718,53 +770,62 @@
           </div>
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer - API &amp; Backend</h4>
-            <p class="text-sm text-muted/80 italic mb-3">Early engineering hire (#50); company grew from startup to 700+ employee global enterprise during tenure.</p>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Senior Software Engineer - API &amp; Backend</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">3/2012 - 2/2015</span>
+            </div>
+            <p class="text-base text-muted italic mb-3">Early engineering hire (#50); company grew from startup to 700+ employee global enterprise during tenure.</p>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">High-Throughput Messaging:</span> Implemented asynchronous queuing systems using Python <span class="text-fg">Celery</span> and <span class="text-fg">Redis</span>, resolving critical bottlenecks in SMS transaction processing.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Gateway Integration:</span> Integrated backend systems with <span class="text-fg">Kannel</span> (Open Source <span class="text-fg">WAP/SMS</span> gateway) to expand carrier connectivity.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Distributed Systems:</span> Refactored the monolithic backend to support distributed compute requirements, migrating from a single data center to a multi-region (3 DC) architecture.
               </li>
               
             </ul>
           </div>
           
+          </div>
         </div>
         <div class="reveal">
-          <div class="section-divider mb-10"></div>
+          <div class="section-divider my-4"></div>
           <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-1">
             <h3 class="text-xl md:text-2xl font-semibold text-fg">Twistbox Entertainment</h3>
             <span class="font-mono text-xs text-muted mt-1 md:mt-0">2005 - 2011</span>
           </div>
-          <p class="text-sm text-muted mb-6">Los Angeles / UK</p>
+          <p class="text-sm text-muted mb-4">Los Angeles / UK</p>
+          <div class="space-y-6">
           
           <div class="pl-4 border-l" style="border-color: var(--twistbox-border);">
-            <h4 class="text-base font-semibold text-fg mb-3">Senior Software Engineer</h4>
-            <ul class="space-y-2">
+            <div class="flex flex-col md:flex-row md:items-baseline md:justify-between mb-2">
+              <h4 class="text-lg font-semibold text-fg">Senior Software Engineer</h4>
+              <span class="font-mono text-xs text-muted mt-1 md:mt-0">2005 - 2011</span>
+            </div>
+            <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Protocol &amp; Messaging System:</span> Built a custom <span class="text-fg">SMPP</span> (Short Message Peer-to-Peer) client in pure Python from scratch.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Billing Systems:</span> Built a SMS billing system with messaging queue and async Python worker to communicate with the SMS center with <span class="text-fg">SMPP</span>.
               </li>
               
-              <li class="text-sm text-muted leading-relaxed">
+              <li class="text-base text-muted leading-normal">
                 <span class="text-fg font-medium">Mobile WAP Development:</span> Worked on in-house web framework, internal tools, third party service integration (REST, SOAP, raw socket).
               </li>
               
             </ul>
           </div>
           
+          </div>
         </div>
         
       </div>
@@ -773,9 +834,9 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== SKILLS ===== -->
-    <section id="skills" class="py-10 md:py-16 px-4 sm:px-6">
+    <section id="skills" class="py-8 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="reveal mb-12 md:mb-16">
+        <div class="reveal mb-8">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Toolkit</span>
           <h2 class="section-heading text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Skills &amp; Technologies
           </h2>
@@ -859,9 +920,9 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="py-10 md:py-16 px-4 sm:px-6">
+    <section id="projects" class="py-8 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
-        <div class="reveal mb-12 md:mb-16">
+        <div class="reveal mb-8">
           <span class="font-mono text-xs tracking-widest text-accent uppercase">Side Projects</span>
           <h2 class="section-heading text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tight gradient-text mt-3">Personal Projects</h2>
         </div><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
@@ -962,7 +1023,7 @@
     <div class="section-divider max-w-5xl mx-auto"></div>
 
     <!-- ===== EDUCATION ===== -->
-    <section class="py-10 md:py-14 px-4 sm:px-6">
+    <section class="py-8 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <div class="reveal flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
@@ -980,11 +1041,18 @@
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <span class="text-xs text-muted">&copy; 2026 Wilson K. Choi</span>
       <div class="flex items-center gap-6">
-        <a href="mailto:wilsonkichoi@gmail.com" class="text-xs text-muted hover:text-accent transition-colors">Email</a>
-        <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener"
-          class="text-xs text-muted hover:text-accent transition-colors">LinkedIn</a>
-        <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener"
-          class="text-xs text-muted hover:text-accent transition-colors">GitHub</a>
+        <a href="mailto:wilsonkichoi@gmail.com" aria-label="Email"
+          class="text-muted hover:text-accent transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+        </a>
+        <a href="https://linkedin.com/in/wilsonkichoi" target="_blank" rel="noopener" aria-label="LinkedIn"
+          class="text-muted hover:text-accent transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        </a>
+        <a href="https://github.com/wilsonkichoi" target="_blank" rel="noopener" aria-label="GitHub"
+          class="text-muted hover:text-accent transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
       </div>
     </div>
   </footer>
