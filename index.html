@@ -641,15 +641,15 @@
               <ul class="space-y-2 list-disc pl-5 marker:text-accent">
                 
                 <li class="text-base text-muted leading-normal">
-                  <span class="text-fg font-medium">Agent Tooling:</span> Built and released agent-toolkit, a cross-harness agent plugin suite for <span class="text-fg">Claude Code</span>, OpenAI <span class="text-fg">Codex</span>, and <span class="text-fg">Kiro</span>. Ships 19 skills across two plugins, 3 bundled subagents, and a human-in-the-loop development lifecycle (setup, plan, execute, review-pr, verify) that tracks tasks in GitHub Issues or <span class="text-fg">Linear</span>.
+                  <span class="text-fg font-medium">Agent Tooling:</span> Built and released agent-toolkit, a cross-harness agent plugin suite for <span class="text-fg">Claude Code</span>, OpenAI <span class="text-fg">Codex</span>, and <span class="text-fg">Kiro</span>. Ships 19 skills across two plugins, 3 bundled subagents, and a human-in-the-loop AI-SDLC with task tracker using GitHub Issues or <span class="text-fg">Linear</span>.
                 </li>
                 
                 <li class="text-base text-muted leading-normal">
-                  <span class="text-fg font-medium">LagunaBeach.md:</span> Built and run lagunabeach.md, an AI-native knowledge base for my town. It is an <span class="text-fg">Astro</span> static site on <span class="text-fg">GitHub Pages</span> backed by 4 <span class="text-fg">Cloudflare Workers</span> and a shared library. Its chat answers only from the site's own articles: a build step embeds every chunk with <span class="text-fg">bge-m3</span> on <span class="text-fg">Workers AI</span> into a quantized vector file, the Worker ranks each question against it, and anything the articles do not cover is declined instead of guessed. The same content is served to AI clients through a remote <span class="text-fg">MCP</span> server, llms.txt, and raw Markdown endpoints.
+                  <span class="text-fg font-medium">LagunaBeach.md:</span> Built and run lagunabeach.md, an AI-native knowledge base for my town. It is an <span class="text-fg">Astro</span> static site on <span class="text-fg">GitHub Pages</span> backed by <span class="text-fg">Cloudflare Workers</span> and a shared library. Its chat answers only from the site's own articles: a build step embeds every chunk with <span class="text-fg">bge-m3</span> on <span class="text-fg">Workers AI</span> into a quantized vector file, the Worker ranks each question against it, and anything the articles do not cover is declined instead of guessed. The same content is served to AI clients through a remote <span class="text-fg">MCP</span> server, llms.txt, and raw Markdown endpoints.
                 </li>
                 
                 <li class="text-base text-muted leading-normal">
-                  <span class="text-fg font-medium">Sekai KB:</span> Extracted the lagunabeach.md codebase into sekai-kb, a GitHub template for running your own AI-native knowledge base with the same chat, Workers, and <span class="text-fg">Astro</span> site. Adopters pull framework updates without touching their own content: 32 tagged releases with a version-pinned upgrade path. A third party runs carbonia-md.github.io on it.
+                  <span class="text-fg font-medium">Sekai KB:</span> Extracted the lagunabeach.md codebase into sekai-kb, a GitHub template for running your own AI-native knowledge base with the same chat, Workers, and <span class="text-fg">Astro</span> site. 32 tagged releases with a version-pinned upgrade path. A third party runs carbonia-md.github.io on it.
                 </li>
                 
               </ul>
@@ -671,15 +671,15 @@
               <h4 class="text-lg font-semibold text-fg">Senior Software Engineer - MLOps</h4>
               <span class="font-mono text-xs text-muted mt-1 md:mt-0">Mar 2024 - Mar 2025</span>
             </div>
-            <p class="text-base text-muted italic mb-3">Joined the MLOps team to build out the model packaging and deployment pipeline that takes trained artifacts from Data Science and packages, registers, and deploys them to <span class="text-fg">AWS SageMaker</span> for real-time and batch inference.</p>
+            <p class="text-base text-muted italic mb-3">Joined the MLOps team to build out the model packaging and deployment pipeline that takes trained artifacts from Data Science and packages, registers, deploys to <span class="text-fg">AWS SageMaker</span> for real-time and batch inference.</p>
             <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Pipeline Contribution:</span> Contributed to the <span class="text-fg">Jenkins</span> + Python pipeline that validates trained <span class="text-fg">scikit-learn</span> artifacts, repackages them via a SageMaker training job, registers them in <span class="text-fg">Model Registry</span>, and deploys to real-time endpoints and batch transform across regions.
+                <span class="text-fg font-medium">Pipeline Contribution:</span> Contributed to the <span class="text-fg">Jenkins</span> + Python pipeline that validates trained <span class="text-fg">scikit-learn</span> artifacts, repackages via a SageMaker training job, registers in <span class="text-fg">Model Registry</span>, and deploys to real-time endpoints and batch transform across regions.
               </li>
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Load Testing:</span> Integrated SageMaker <span class="text-fg">Inference Recommender</span> into the pipeline for automated load testing, producing capacity and latency reports (stored to <span class="text-fg">S3</span>) to right-size endpoint configuration before production.
+                <span class="text-fg font-medium">Load Testing:</span> Integrated SageMaker <span class="text-fg">Inference Recommender</span> into the pipeline for automated load testing, producing capacity and latency reports to right-size endpoint configuration before production.
               </li>
               
               <li class="text-base text-muted leading-normal">
@@ -710,11 +710,11 @@
               </li>
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Score Architecture:</span> Architected, designed, and implemented observability (<span class="text-fg">ELK</span> APM) for the Score fraud-detection serving layer, and authored the Score 2.0 architecture proposal and handover documentation that gave the inheriting team a clear implementation path.
+                <span class="text-fg font-medium">Phone Number Intelligence Architecture:</span> Architected, designed, and implemented observability (<span class="text-fg">ELK</span> APM) for the Phone Number  fraud-detection serving layer. Co-authored the 2.0 architecture proposal and handover documentation that gave the inheriting team a clear implementation path.
               </li>
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Email Cleansing:</span> Developed a Python email validation and normalization library using Parsing Expression Grammar (<span class="text-fg">PEG</span>), replacing a regex approach that grew unmaintainable as provider-specific rules (Google, Yahoo, Outlook) multiplied. Supports RFC 5322 compliance.
+                <span class="text-fg font-medium">Email Cleansing:</span> Developed a Python email validation and normalization library using Parsing Expression Grammar (<span class="text-fg">PEG</span>), replacing a regex approach that grew unmaintainable as provider specific rules (Google, Yahoo, Outlook) multiplied. Supports RFC 5322 compliance.
               </li>
               
             </ul>
@@ -774,7 +774,7 @@
             <ul class="space-y-2 list-disc pl-5 marker:text-accent">
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Internal Tools:</span> Built centralized dashboards (<span class="text-fg">Django</span>) to manage API features, BI reporting, customer configurations, and billing/invoicing (<span class="text-fg">NetSuite</span> integration).
+                <span class="text-fg font-medium">Internal Management Console:</span> Built centralized dashboards (<span class="text-fg">Django</span>) to manage API features, BI reporting, customer configurations, and billing/invoicing (<span class="text-fg">NetSuite</span> integration).
               </li>
               
               <li class="text-base text-muted leading-normal">
@@ -797,11 +797,11 @@
               </li>
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Gateway Integration:</span> Integrated backend systems with <span class="text-fg">Kannel</span> (Open Source <span class="text-fg">WAP/SMS</span> gateway) to expand carrier connectivity.
+                <span class="text-fg font-medium">SMS Gateway Integration:</span> Integrated backend systems with <span class="text-fg">Kannel</span> (Open Source <span class="text-fg">WAP/SMS</span> gateway) to expand carrier connectivity.
               </li>
               
               <li class="text-base text-muted leading-normal">
-                <span class="text-fg font-medium">Distributed Systems:</span> Refactored the monolithic backend to support distributed compute requirements, migrating from a single data center to a multi-region (3 DC) architecture.
+                <span class="text-fg font-medium">Multi Region Architecture:</span> Refactored the monolithic backend to support distributed compute requirements, migrating from a single data center to a multi-region (3 DC) architecture.
               </li>
               
             </ul>
@@ -987,7 +987,7 @@
             </div>
             <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">agent-toolkit</h3>
             <p class="text-sm text-muted leading-relaxed mb-4">
-              Installable agent workflow plugins for <span class="text-fg">Claude Code</span>, OpenAI <span class="text-fg">Codex</span>, and <span class="text-fg">Kiro</span>. Two plugins ship 19 skills and 3 bundled subagents covering research, knowledge synthesis, security scanning, and a human-in-the-loop development lifecycle. Tasks live in GitHub Issues or <span class="text-fg">Linear</span>, whichever the project configures. Each plugin versions and releases on its own line through <span class="text-fg">GitHub Actions</span>.
+              Installable agent workflow plugins for <span class="text-fg">Claude Code</span>, OpenAI <span class="text-fg">Codex</span>, and <span class="text-fg">Kiro</span>. Two plugins ship 19 skills and 3 bundled subagents, and a human-in-the-loop AI-SDLC with task tracker using GitHub Issues or <span class="text-fg">Linear</span>  Each plugin versions and releases on its own through <span class="text-fg">GitHub Actions</span>.
             </p>
             <div class="flex flex-wrap gap-1.5">
               
@@ -1018,7 +1018,7 @@
             </div>
             <h3 class="text-lg font-semibold text-fg mb-2 group-hover:text-accent transition-colors">Sekai KB / LagunaBeach.md</h3>
             <p class="text-sm text-muted leading-relaxed mb-4">
-              AI-native knowledge base framework and its live instance. LagunaBeach.md is an <span class="text-fg">Astro</span> static site backed by 4 <span class="text-fg">Cloudflare Workers</span> and a shared library: chat that answers only from the site's own articles (<span class="text-fg">bge-m3</span> embeddings on <span class="text-fg">Workers AI</span>, citation-backed), a remote <span class="text-fg">MCP</span> server, reader feedback, and on-demand OG images. Sekai KB was cut out of it as a reusable GitHub template with a version-pinned upgrade path, independently adopted at carbonia-md.github.io. Both repos are built with agent-toolkit.
+              AI-native knowledge base framework and its live instance. LagunaBeach.md is an <span class="text-fg">Astro</span> static site backed by <span class="text-fg">Cloudflare Workers</span> and a shared library: chat that answers only from the site's own articles (<span class="text-fg">bge-m3</span> embeddings on <span class="text-fg">Workers AI</span>, citation-backed), a remote <span class="text-fg">MCP</span> server, reader feedback, and on-demand OG images. Sekai KB was cut out of it as a reusable GitHub template with a version-pinned upgrade path, independently adopted at carbonia-md.github.io. Built with agent-toolkit.
             </p>
             <div class="flex flex-wrap gap-1.5">
               
